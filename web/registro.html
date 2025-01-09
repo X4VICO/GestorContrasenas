@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Kodinger">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Registro | GTX</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/iniciosesion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+</head>
+<body class="my-login-page">
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center h-100">
+                <div class="card-wrapper">
+
+                    <!-- ----------------------LOGO-------------- -->
+                    <div class="brand">
+                        <img src="img/logo.svg" alt="bootstrap 4 login page">
+                    </div>
+
+                    <!-- ----------------------FORMULARIO-------------- -->
+                    <div class="card fat">
+                        <div class="card-body">
+
+                            <!-- ----------------------FLECHA PARA VOLVER-------------- -->
+                            <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" color="black" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                            </svg></a>
+
+                            <!-- ----------------------NOMBRE Y CORREO-------------- -->
+                            <h4 class="card-title">Registro</h4>
+                            <form id="registroForm">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="nombre" class="form-control" required>
+                                    <div class="invalid-feedback">Cual es tu nombre?</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo Electrónico</label>
+                                    <input type="email" id="email" class="form-control" required>
+                                    <div class="invalid-feedback">El correo electrónico no es correcto</div>
+                                </div>
+
+                                <!-- ----------------------CONTRASEÑAS-------------- -->                                
+                                <div class="form-group">
+                                    <label for="password">Contraseña (min. 16 caracteres)<span class="input-group-text toggle-password" id="toggle-password"><i class="fas fa-eye"></i></span></label>
+                                    <div class="input-group">
+                                        <input type="password" id="password" class="form-control" required>
+                                        <div class="invalid-feedback">La contraseña no es segura</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirmar Contraseña<span class="input-group-text toggle-password" id="toggle-confirmPassword"><i class="fas fa-eye"></i></span></label>
+                                    <div class="input-group">
+                                        <input type="password" id="confirmPassword" class="form-control" required>
+                                        <div class="invalid-feedback">Las contraseñas no coinciden</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="masterKey">Llave Maestra (min. 18 caracteres)<span class="input-group-text toggle-password" id="toggle-masterKey"><i class="fas fa-eye"></i></span></label>
+                                    <div class="input-group">
+                                        <input type="password" id="masterKey" class="form-control" required>
+                                        <div class="invalid-feedback">La llave maestra no es segura</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirmMasterKey">Confirmar Llave Maestra<span class="input-group-text toggle-password" id="toggle-confirmMasterKey"><i class="fas fa-eye"></i></span></label>
+                                    <div class="input-group">
+                                        <input type="password" id="confirmMasterKey" class="form-control" required>
+                                        <div class="invalid-feedback">Las llaves maestras no coinciden</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- ----------------------TERMINOS Y CONDICIONES-------------- -->
+                                <div class="form-group">
+                                    <div class="custom-checkbox custom-control">
+                                        <input type="checkbox" name="agree" id="agree" class="custom-control-input" required>
+                                        <label for="agree" class="custom-control-label">He leído y acepto los <a href="#">Términos y condiciones</a></label>
+                                        <div class="invalid-feedback">Debes aceptar los términos y condiciones</div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Registro</button>
+                                <div class="mt-4 text-center">¿Ya tienes una cuenta? <a href="iniciosesion.html">Iniciar Sesión</a></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer">Copyright &copy; 2024 &mdash; GTX</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./js/firebase.js"></script>
+    <script type="module" src="./js/registro.js"></script>
+</body>
+</html>

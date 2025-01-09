@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Contraseñas | GTX</title>
+    <!-- Enlace a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/llavero.css"> <!-- Incluye tu CSS aquí -->
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- -----------------HEADER-------------------- -->
+    <header class="bg-light py-3 mb-4 border-bottom shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+
+                <!-- -------------USUARIO----------------- -->
+                <button class="btn btn-outline-dark d-flex align-items-center justify-content-center" id="profile-button" style="width: 124.7px; height: 40px;">
+                    <img src="/img/logo.svg" alt="Logo" style="width: 30px; height: 30px;" class="me-2">
+                    <span id="user-name">Cargando...</span>
+                </button>      
+
+                <!-- ------------BOTÓN MIS APPS------------- -->
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid justify-content-center">
+                        <a href="llavero.html" class="btn btn-outline-secondary botonesmenu">Mis APP's</a>
+                    </div>
+                </nav>
+
+                <!-- ------------CERRAR SESIÓN------------- -->
+                <button class="btn btn-danger" id="logout-button">Cerrar Sesión</button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4 bg-dark">
+                    <form id="appForm">
+
+                        <div class="mb-3">
+                            <label for="nombreApp" class="form-label">Nombre de la aplicación</label>
+                            <input type="text" class="form-control" id="nombreApp" placeholder="Nombre App">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="urlApp" class="form-label">URL</label>
+                            <input type="text" class="form-control" id="urlApp" placeholder="URL App">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="user" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="user" placeholder="Usuario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <div class="d-flex justify-content-between">
+                                <div class="input-group flex-grow-1 me-2">
+                                    <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                                    <button type="button" class="btn btn-outline-light" id="togglePassword">👁️</button>
+                                </div>
+                                <button class="btn btn-outline-light" type="button" id="generate">Generar</button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Comentario</label>
+                            <textarea class="form-control" id="comment" rows="3" placeholder="Comentario"></textarea>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success" id="saveBtn">Guardar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+                Copyright &copy; 2024 &mdash; Gestor de contraseñas GTX 
+        </div>
+    </div>
+
+    <!-- Enlace a Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/nuevapp.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
+
+<body>
+  <h1>Contenido Protegido</h1>
+  <p>Solo los usuarios autenticados pueden ver este contenido.</p>
+
+  <script src="firebaseConfig.js"></script>
+  <script>
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+
+    const auth = getAuth();
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        // Si no hay usuario autenticado, redirige a la página de inicio de sesión
+        window.location.href = "/index.html";
+      }
+    });
+  </script>
+</body>

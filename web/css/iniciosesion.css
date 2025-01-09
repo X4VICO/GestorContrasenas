@@ -1,0 +1,138 @@
+body.my-login-page {
+    background-color: black;
+    font-size: 14px;
+}
+
+.my-login-page .brand {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 40px auto;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -12%;
+}
+
+.card {
+    background-color: #b5ffa6 !important;
+}
+
+.row {
+    justify-content: center;
+}
+
+.card-title{
+	font-weight: bold;
+    padding-top: 3rem;
+}
+
+.my-login-page .brand img {
+    width: 100%;
+}
+
+.my-login-page .card-wrapper {
+    width: 400px;
+}
+
+.my-login-page .card {
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.my-login-page .card.fat {
+    padding: 10px;
+    border: 5px solid #234c17;
+}
+
+.my-login-page .card .card-title {
+    margin-bottom: 30px;
+}
+
+.my-login-page .form-control {
+    background-color: #eeffe7;
+    border: 2px solid #234c17;
+}
+
+.my-login-page .form-group label {
+    width: 100%;
+    display: flex;
+    margin-bottom: .5rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-group #putoboot{
+	display: none !important;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Estilos del botón de login */
+.my-login-page .btn.btn-block {
+    padding: 12px 10px;
+    background-color: #234c17 !important; /* Color de fondo verde */
+    border: 2px solid #234c17 !important; /* Borde verde */
+    color: white;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden; /* Oculta el pseudo-elemento */
+    transition: all 0.4s ease; /* Transición suave */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+}
+
+/* Efecto de onda radial */
+.my-login-page .btn.btn-block::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    transition: transform 0.5s ease;
+    transform: translate(-50%, -50%) scale(0); /* Comienza pequeño */
+    border-radius: 50%;
+}
+
+/* Agrandar el efecto circular en hover */
+.my-login-page .btn.btn-block:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Agranda el efecto circular en hover */
+}
+
+/* Hover sin cambiar de color */
+.my-login-page .btn.btn-block:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+    background-color: #234c17 !important; /* Mantiene el color de fondo verde */
+}
+
+
+
+.my-login-page .footer {
+    margin: 40px 0;
+    color: #888;
+    text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+    .my-login-page .card-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .my-login-page .card.fat {
+        padding: 0;
+    }
+
+    .my-login-page .card.fat .card-body {
+        padding: 15px;
+    }
+}

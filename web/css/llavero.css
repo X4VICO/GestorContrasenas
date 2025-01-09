@@ -1,0 +1,141 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+/* Header Styles */
+header {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-light {
+    background-color: #b5ffa6 !important;
+}
+
+.border-bottom {
+    border-bottom: none !important;
+}
+
+.bg-dark {
+    background-color: #234c17 !important;
+    border-color: #b5ffa6;
+}
+
+.form-label {
+    color: white;
+}
+
+.botonesmenu {
+    background-color: #234c17;
+    color: white ;
+    font-weight: bold;
+    padding: 0.75rem 2rem; /* Aumenta el padding horizontal para que los botones sean más largos */
+    min-width: 150px; /* Ancho mínimo para controlar la longitud de los botones */
+    text-align: center;
+}
+
+.icono:hover {
+    background-color: #234c17 !important;
+}
+
+header .btn {
+    font-size: 1rem;
+}
+
+.anadirapp {
+    background-color: #234c17;
+    border-color: #b5ffa6;
+    color: white;
+}
+
+.anadirapp:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
+    background-color: #234c17 !important;
+    border-color: #b5ffa6 !important;
+}
+
+.btn-outline-secondary{
+    --bs-btn-hover-bg: #234c17 !important;
+    --bs-btn-hover-border-color: #234c17 !important;
+}
+
+.app {
+    color: white !important;
+    border: inset 3px #234c17;    
+}
+
+.app:hover {
+    color: black !important;
+    border: outset 3px #234c17;
+    background-color: #b5ffa6;
+}
+
+header .btn-outline-dark {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden-text{
+    color: grey !important;
+}
+.card {
+    --bs-card-bg: #b5ffa6;
+}
+
+.card-body{
+    background-color: #234c17;
+    color: white;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #b5ffa6;
+    --bs-btn-border-color: #b5ffa6;
+    --bs-btn-hover-color: #234c17;
+    --bs-btn-hover-bg: #b5ffa6;
+    --bs-btn-hover-border-color: #b5ffa6;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #234c17;
+    --bs-btn-active-bg: #b5ffa6;
+    --bs-btn-active-border-color: #b5ffa6;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #b5ffa6;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #b5ffa6;
+    --bs-gradient: none;
+}
+
+
+.footer {
+    margin: 40px 0;
+    color: #888;
+    text-align: center;
+}
+
+
+/* Estilos Responsive */
+@media (max-width: 992px) {
+    .botonesmenu {
+        min-width: 120px; /* Reducir el ancho mínimo de los botones en pantallas más pequeñas */
+    }
+    
+    .navbar-collapse {
+        justify-content: flex-start; /* Alinea los enlaces del menú a la izquierda en pantallas pequeñas */
+        flex-direction: column; /* Coloca los enlaces en columna */
+    }
+
+    .icono {
+        display: none; /* Oculta el icono de perfil en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .anadirapp {
+        padding: 0.5rem 1.5rem; /* Ajustar el padding del botón "Añadir APP" */
+        font-size: 1rem; /* Ajustar el tamaño de la fuente */
+    }
+}
